@@ -1,9 +1,11 @@
-# neat-demo
-Simple demo app to practice with neat and bourbon
+# foundation-demo
+Simple demo app to practice with Zurb foundation
+
+This app was based off of [https://github.com/mdenomy/neat-demo](https://github.com/mdenomy/neat-demo)
 
 **This is not intended to be a fully functioning app.**  
 
-It only exists to play around with the neat and bourbon gems
+It only exists to play around with Foundation
 
 ## Seeding the Database
 To set up the application with some sample data, seed the database with the following command 
