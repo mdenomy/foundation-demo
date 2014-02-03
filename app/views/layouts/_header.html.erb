@@ -1,11 +1,15 @@
-<div class="header">
-  <div class="banner">
-  <span class="title"><%= link_to "Denomy's Wine Emporium", root_path %></span>
-  <nav>
-    <ul>
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1><%= link_to "Denomy's Wine Emporium", root_path %></a></h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+  <section class="top-bar-section">
+    <ul class="right">
+      <li><%= link_to 'Home', root_path %></li>
       <li><%= link_to 'About', about_path %></li>
       <li><%= link_to 'Help', help_path %></li>
     </ul>
-  </nav>
   </div>
-</div>
+</nav>

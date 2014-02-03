@@ -1012,12 +1012,12 @@ $secondary-color: #910021;
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-$topbar-bg-color: #910021;
+$topbar-bg-color: darken($accent, 20%);
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: 45px;
-// $topbar-margin-bottom: 0;
+$topbar-height: 80px;
+$topbar-margin-bottom: 40px;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: normal;

@@ -1,33 +1,11 @@
-body {
-  background-color: $background;
-  color:  $text; 
-  font-family: 'lato';
+nav.top-bar .name a {
+  font-size: 48px;
+  color:  $background;
 }
 
-div.header {
-  padding: 5px 0 5px 0;
-  line-height: 48px;
-  margin-bottom: 20px;
-
-  .title {
-    margin-left: 20px;
-    @extend .large-8.columns;
-    font-size:  42px;
-  }
-
-  a {
-    color: darken($background, 10%);
-    text-decoration: none;
-  }
-
-  nav ul {
-    list-style-type: none;
-    font-size: 24px;
-    li {
-      margin-right: 20px;
-      display: inline-block;
-    }
-  }
+.top-bar-section ul li > a {
+  font-size: 24px; 
+  color:  $background;
 }
 
 div.container {
@@ -61,6 +39,7 @@ h1 {
 p {
   color: $border;
   font-size: 20px;
+  margin: 10px;
 
   a {
     font-weight: bold;
