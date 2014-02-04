@@ -35,7 +35,7 @@
 // $total-columns: 12;
 
 // We use these to control various global styles
-$body-bg: #fdfff4;
+$body-bg: $background;
 $body-font-color: $text;
 $body-font-family: "lato";
 // $body-font-weight: normal;
@@ -50,8 +50,8 @@ $body-font-family: "lato";
 // $default-float: left;
 
 // We use these as default colors throughout
-$primary-color: #fdfff4;
-$secondary-color: #910021;
+$primary-color: $background;
+$secondary-color: $accent;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
