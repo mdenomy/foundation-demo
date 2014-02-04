@@ -3,14 +3,14 @@ require "spec_helper"
 feature "header" do
   scenario "it has the company name" do 
     visit root_path
-    within :css, '.header' do 
-      page.should have_content "Denomy's Wine Emporium"
+    within :css, '.top-bar' do 
+      page.should have_link "Denomy's Wine Emporium"
     end
   end
 
   scenario "has links to other static pages" do 
     visit root_path
-    within :css, '.header' do 
+    within :css, '.top-bar' do 
       page.should have_link "About"
       page.should have_link "Help"
       page.should have_link "Denomy's Wine Emporium", :href => root_path
