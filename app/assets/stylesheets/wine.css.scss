@@ -48,6 +48,10 @@
 }
 
 .events {
+  border-radius:  5px;
+  padding-top:    10px;
+  padding-bottom: 20px;
+
   @include background(linear-gradient(darken($accent, 20%), darken($accent, 10%)));
   color: $background;
 
