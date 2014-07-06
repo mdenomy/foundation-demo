@@ -6,6 +6,8 @@ gem 'rails', '4.1.4'
 
 gem 'pg'
 gem 'puma'
+gem 'devise'
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -14,10 +16,11 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails', '~> 4.2.1'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -32,7 +35,7 @@ group :development, :test do
 end
 
 group :test do 
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 2.14.2'
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
