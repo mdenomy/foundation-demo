@@ -11,6 +11,15 @@ FactoryGirl.define do
     notes     Faker::Lorem.sentence
     reviewer  Faker::Name.name
   end
+
+  sequence :email do |n|
+    "person#{n}@example.com"
+  end
+
+  factory :admin_user do
+    email
+    password   'password123'
+  end
   
  end
 
