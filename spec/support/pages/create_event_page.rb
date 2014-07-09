@@ -12,17 +12,14 @@ class CreateEventPage
     click_button 'Login'
   end
 
-  def enter_details(params)
+  def create_event(params)
     date = params[:date]
     select date.year.to_s, from: 'Year'
     select Date::MONTHNAMES[date.month], from: 'Month'
     select date.day.to_s, from: 'Day'
     fill_in 'Title', with: params[:title]
     fill_in 'Description', with: params[:description]
+    click_on 'Create Event'
   end
 
-  def create_event?
-    click_on 'Create Event'
-    page.has_content?('Event was successfully created')
-  end
 end

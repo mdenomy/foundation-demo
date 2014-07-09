@@ -23,35 +23,13 @@
     <div class="events">
       <h1>Events</h1>
       <ul>
-        <li class="event">
-          <span class="date">2/1/2014</span>
-          <span class="title">California Cabs</span>
-          <span class="description">Join us for a tasting of California's best Cabernet Sauvignon.  
-            We'll cover a broad spectrum of styles and price ranges, there will be something for everyone.
-          </span>
-        </li>
-         <li class="event">
-          <span class="date">2/8/2014</span>
-          <span class="title">Be My Valentine</span>
-          <span class="description">Valentine's day is just around the corner.  We'll be trying some sparkling
-            wines from around the world for that special day.
-          </span>
-        </li>
-       <li class="event">
-          <span class="date">2/15/2014</span>
-          <span class="title">Not Just Chianti</span>
-          <span class="description">We love Chianti too, but Italy is home to several great styles of wine.
-            Come on in and discover some of the great wine regions of Italy.
-          </span>
-        </li>
-       <li class="event">
-          <span class="date">2/22/2014</span>
-          <span class="title">20 Under $20</span>
-          <span class="description">The staff will pick out their favorite 20 wines all for under $20. 
-            This is a great opportunity to try out some great wines that are as easy on the wallet as they
-            are on your tastebuds.
-          </span>
-        </li>
+        <% @events.each do |event| %>
+          <li class="event">
+            <span class="date"><%= event.date.strftime("%m/%d/%Y")%></span>
+            <span class="title"><%= event.title%></span>
+            <span class="description"><%= event.description%></span>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
