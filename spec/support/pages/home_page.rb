@@ -8,13 +8,17 @@ class HomePage
   end
 
   def has_event?(event)
-    found = false
     page.all('.event').each do |node| 
-      found = node.has_css?('.date', text: event[:date].strftime("%m/%d/%Y")) &&
-              node.has_css?('.title', text: event[:title]) &&
-              node.has_css?('.description', text: event[:description])
-      break if found
+      return true if match_found?(node, event)
     end
-    found
+    false
+  end
+
+  private 
+
+  def match_found?(node, event)
+    node.has_css?('.date', text: event[:date].strftime("%m/%d/%Y")) &&
+    node.has_css?('.title', text: event[:title]) &&
+    node.has_css?('.description', text: event[:description])
   end
 end
