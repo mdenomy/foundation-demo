@@ -19,4 +19,13 @@ feature 'events on homepage' do
     homepage = HomePage.new
     expect(homepage.show_events_in_order(todays_event, next_weeks_event)).to be_true
   end
+
+  scenario 'limit upcoming events to next 30 days' do
+    todays_event = create :event, date: Date.current
+    last_upcoming_event = create :event, date: Date.current + 30.days
+    furure_event = create :event, date: Date.current + 31.days
+
+    homepage = HomePage.new
+    expect(homepage.show_events_in_order(todays_event, last_upcoming_event)).to be_true
+  end
 end
