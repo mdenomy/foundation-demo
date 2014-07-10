@@ -55,12 +55,6 @@ ActiveRecord::Schema.define(version: 20140706210933) do
     t.text   "description"
   end
 
-  create_table "people", force: true do |t|
-    t.date     "dob"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "reviews", force: true do |t|
     t.integer  "wine_id"
     t.text     "notes"

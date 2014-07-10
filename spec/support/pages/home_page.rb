@@ -1,8 +1,5 @@
-class HomePage
-  include Capybara::DSL
-  include FactoryGirl::Syntax::Methods
-  include Rails.application.routes.url_helpers
-
+class HomePage < Page
+ 
   def initialize
     visit root_path
   end

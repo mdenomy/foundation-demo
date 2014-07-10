@@ -1,7 +1,4 @@
-class CreateEventPage
-  include Capybara::DSL
-  include FactoryGirl::Syntax::Methods
-  include Rails.application.routes.url_helpers
+class CreateEventPage < Page
 
   def initialize
     admin_user = create :admin_user
