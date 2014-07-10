@@ -21,5 +21,11 @@ FactoryGirl.define do
     password   'password123'
   end
   
+  factory :event do
+    date        {Date.current + rand(1..60).days}
+    title       Faker::Lorem.sentence
+    description Faker::Lorem.paragraph
+  end
+  
  end
 

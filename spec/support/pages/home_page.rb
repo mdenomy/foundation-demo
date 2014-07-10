@@ -14,6 +14,13 @@ class HomePage
     false
   end
 
+  def show_events_in_order(*events)
+    nodes = page.all('.event')
+    return false unless nodes.count == events.count
+    nodes.each_with_index{|node, i| return false unless match_found?(node, events[i])}
+    true
+  end
+
   private 
 
   def match_found?(node, event)
