@@ -2,6 +2,6 @@ class StaticPagesController < ApplicationController
 
   def home
     @reviews = Review.limit(4)
-    @events = Event.all.order(:date)
+    @events = Event.upcoming
   end
 end
